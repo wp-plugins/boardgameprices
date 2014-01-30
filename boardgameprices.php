@@ -1,14 +1,14 @@
 <?php
 /**
  * @package boardgameprices
- * @version 1.0.0
+ * @version 1.0.1
  */
 /*
 Plugin Name: BoardGamePrices
 Plugin URI: http://boardgameprices.co.uk/api/plugin
 Description: Short code for embedding the best price for board games
 Author: Kean Pedersen
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://boardgameprices.co.uk
 */
 
@@ -42,13 +42,19 @@ function boardgameprice_shortcode($atts) {
     );
 
     $url = BOARDGAMEPRICES_API_BASEURL . '?' . http_build_query($args);
-    $response = wp_remote_get($url);
-    $body = wp_remote_retrieve_body($response);
-    if (!$body) {
-        return "Error getting price";
+    /* Check cache */
+    $data = wp_cache_get($url, 'boardgameprices');
+    if ($data === false) {
+        $response = wp_remote_get($url);
+        $body = wp_remote_retrieve_body($response);
+        if (!$body) {
+            return "Error getting price";
+        }
+        $data = json_decode($body);
+        wp_cache_set($url, $data, 'boardgameprices', 3600);
     }
 
-    $data = json_decode($body);
+    /* Build output */
     if ($data->bestprice && $data->bestprice->price) {
         $html .= '<a href="' . $data->url . '" target="_blank">';
         $html .= $data->currency;

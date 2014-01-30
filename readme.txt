@@ -3,7 +3,7 @@ Contributors: keanpedersen
 Tags: thumbnail, boardgameprices, price, prices, boardgame, board, game, shortcode
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Short code for embedding the best price for board games from BoardGamePrices
 
@@ -46,9 +46,15 @@ These can be combined, for instance:
 = 1.0.0 =
 First release
 
+= 1.0.1 =
+Now uses object cache for API requests
+
 
 == Changelog ==
 
 = 1.0.0 =
 * First release
+
+= 1.0.1 =
+* Now uses object cache for API requests
 
