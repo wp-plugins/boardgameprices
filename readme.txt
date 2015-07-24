@@ -3,7 +3,7 @@ Contributors: keanpedersen
 Tags: thumbnail, boardgameprices, price, prices, boardgame, board, game, shortcode
 Requires at least: 3.0
 Tested up to: 3.8.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 Short code for embedding the best price for board games from BoardGamePrices
 
@@ -52,6 +52,9 @@ Now uses object cache for API requests
 = 1.0.2 =
 Display Swedish currency as xx,xx kr.
 
+= 1.0.3 =
+Display Swedish currency as xx,xx kr
+
 
 == Changelog ==
 
@@ -63,3 +66,6 @@ Display Swedish currency as xx,xx kr.
 
 = 1.0.2 =
 * Display Swedish currency as xx,xx kr.
+
+= 1.0.3 =
+* Swedish currency with just kr instead of kr.
