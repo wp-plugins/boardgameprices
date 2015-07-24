@@ -49,6 +49,9 @@ First release
 = 1.0.1 =
 Now uses object cache for API requests
 
+= 1.0.2 =
+Display Swedish currency as xx,xx kr.
+
 
 == Changelog ==
 
@@ -58,3 +61,5 @@ Now uses object cache for API requests
 = 1.0.1 =
 * Now uses object cache for API requests
 
+= 1.0.2 =
+* Display Swedish currency as xx,xx kr.

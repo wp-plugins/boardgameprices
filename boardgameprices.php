@@ -1,14 +1,14 @@
 <?php
 /**
  * @package boardgameprices
- * @version 1.0.1
+ * @version 1.0.2
  */
 /*
 Plugin Name: BoardGamePrices
 Plugin URI: http://boardgameprices.co.uk/api/plugin
 Description: Short code for embedding the best price for board games
 Author: Kean Pedersen
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://boardgameprices.co.uk
 */
 
@@ -57,9 +57,14 @@ function boardgameprice_shortcode($atts) {
     /* Build output */
     if ($data->bestprice && $data->bestprice->price) {
         $html .= '<a href="' . $data->url . '" target="_blank">';
-        $html .= $data->currency;
-        $html .= "&nbsp;";
-        $html .= $data->bestprice->price;
+        if ($data->destination == 'SE' and $data->currency == 'SEK') {
+            $html .= number_format($data->bestprice->price, 2, ',','.');
+            $html .= "&nbsp;kr.";
+        } else {
+            $html .= $data->currency;
+            $html .= "&nbsp;";
+            $html .= $data->bestprice->price;
+        }
         $html .= '</a>';
     } else {
         return 'unknown price';
