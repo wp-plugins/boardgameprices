@@ -59,7 +59,7 @@ function boardgameprice_shortcode($atts) {
         $html .= '<a href="' . $data->url . '" target="_blank">';
         if ($data->destination == 'SE' and $data->currency == 'SEK') {
             $html .= number_format($data->bestprice->price, 2, ',','.');
-            $html .= "&nbsp;kr.";
+            $html .= "&nbsp;kr";
         } else {
             $html .= $data->currency;
             $html .= "&nbsp;";
