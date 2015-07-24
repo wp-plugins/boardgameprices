@@ -2,8 +2,8 @@
 Contributors: keanpedersen
 Tags: thumbnail, boardgameprices, price, prices, boardgame, board, game, shortcode
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.0.1
+Tested up to: 3.8.9
+Stable tag: 1.0.2
 
 Short code for embedding the best price for board games from BoardGamePrices
 
@@ -49,6 +49,9 @@ First release
 = 1.0.1 =
 Now uses object cache for API requests
 
+= 1.0.2 =
+Display Swedish currency as xx,xx kr.
+
 
 == Changelog ==
 
@@ -58,3 +61,5 @@ Now uses object cache for API requests
 = 1.0.1 =
 * Now uses object cache for API requests
 
+= 1.0.2 =
+* Display Swedish currency as xx,xx kr.
