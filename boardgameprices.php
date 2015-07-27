@@ -1,14 +1,14 @@
 <?php
 /**
  * @package boardgameprices
- * @version 1.0.2
+ * @version 1.0.3
  */
 /*
 Plugin Name: BoardGamePrices
 Plugin URI: http://boardgameprices.co.uk/api/plugin
 Description: Short code for embedding the best price for board games
 Author: Kean Pedersen
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://boardgameprices.co.uk
 */
 
